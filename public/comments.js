@@ -3,7 +3,8 @@
   let nextOffset=null,isModerator=false,busy=false;
   const tokens={};try{Object.assign(tokens,JSON.parse(localStorage.getItem('phs651-comment-removal')||'{}'));}catch{}
   for(let n=1;n<=24;n++){const option=document.createElement('option');option.value=n;option.textContent=`Lecture ${n}`;$('comment-lecture').append(option);}
-  async function api(url,options){const response=await fetch(url,options);let data;try{data=await response.json();}catch{throw Error('Comments are temporarily unavailable. Please try again.');}if(!response.ok)throw Error(data.error||'Please try again.');return data;}
+  const apiOrigin=location.origin==='https://lmaowisc.github.io'?'https://phs651-spring-2019.lmaowisc.chatgpt.site':'';
+  async function api(url,options){const response=await fetch(apiOrigin+url,{...options,credentials:apiOrigin?'omit':'same-origin'});let data;try{data=await response.json();}catch{throw Error('Comments are temporarily unavailable. Please try again.');}if(!response.ok)throw Error(data.error||'Please try again.');return data;}
   function render(comment){
     const article=document.createElement('article');article.className='visitor-comment';
     const name=document.createElement('h3');name.textContent=comment.name;

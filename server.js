@@ -1,6 +1,7 @@
 const json = (data,status=200) => Response.json(data,{status,headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});
 const hash = async value => Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(value))),b=>b.toString(16).padStart(2,'0')).join('');
-const moderator = request => request.headers.get('oai-authenticated-user-email')?.toLowerCase() === 'lmaowisc@gmail.com';
+const pagesOrigin = 'https://lmaowisc.github.io';
+const moderator = request => request.headers.get('Origin') !== pagesOrigin && request.headers.get('oai-authenticated-user-email')?.toLowerCase() === 'lmaowisc@gmail.com';
 async function readJson(request) {
   const reader=request.body?.getReader(); if(!reader)throw Error('empty');
   let size=0; const chunks=[];
@@ -10,6 +11,23 @@ async function readJson(request) {
 }
 export default {
   async fetch(request,env) {
+    const origin=request.headers.get('Origin');
+    const url=new URL(request.url);
+    if(!url.pathname.startsWith('/api/')) return env.ASSETS.fetch(request);
+    const allowed=origin===url.origin || origin===pagesOrigin;
+    if(request.method==='OPTIONS'){
+      if(!allowed)return json({error:'Origin not allowed.'},403);
+      const headers=new Headers({'Access-Control-Allow-Origin':origin,'Access-Control-Allow-Methods':'GET, POST, DELETE, OPTIONS','Access-Control-Allow-Headers':'Content-Type, X-Delete-Token','Access-Control-Max-Age':'600','Vary':'Origin'});
+      return new Response(null,{status:204,headers});
+    }
+    const response=await handleComments(request,env);
+    const headers=new Headers(response.headers);
+    headers.set('Vary','Origin');
+    if(allowed)headers.set('Access-Control-Allow-Origin',origin);
+    return new Response(response.body,{status:response.status,headers});
+  }
+};
+async function handleComments(request,env) {
     const url=new URL(request.url);
     if(!url.pathname.startsWith('/api/')) return env.ASSETS.fetch(request);
     if(url.pathname!=='/api/comments' && !/^\/api\/comments\/[a-f0-9-]{36}$/.test(url.pathname))return json({error:'Not found.'},404);
@@ -20,7 +38,8 @@ export default {
         return json({comments:results.slice(0,50),nextOffset:results.length>50?offset+50:null,moderator:moderator(request)});
       }
       if(!['POST','DELETE'].includes(request.method))return json({error:'Method not allowed.'},405);
-      if(request.headers.get('Origin')!==url.origin || request.headers.get('Sec-Fetch-Site')==='cross-site')return json({error:'Please post from this website.'},403);
+      const origin=request.headers.get('Origin');
+      if(origin!==url.origin && origin!==pagesOrigin)return json({error:'Please post from this website.'},403);
       if(request.method==='DELETE'){
         const id=url.pathname.split('/')[3];if(!id)return json({error:'Missing comment.'},400);
         const token=request.headers.get('X-Delete-Token')||'';
@@ -45,5 +64,4 @@ export default {
       if(!result.meta.changes)return json({error:'Please wait 30 seconds before posting another comment.'},429);
       return json({comment:{id,name,body,lecture,created_at:now},deleteToken:token},201);
     } catch {return json({error:'Comments are temporarily unavailable. Please try again; your draft has not been cleared.'},503);}
-  }
-};
+}

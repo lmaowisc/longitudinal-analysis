@@ -1,0 +1,47 @@
+/* A bounded reading surface with larger, comfortable course text. */
+html{font-size:112.5%}
+body{font-size:1rem;line-height:1.7;background:#e5e7e4}
+.topbar,main,footer{width:min(1200px,calc(100% - 96px));margin-inline:auto}
+main{background:var(--paper)}
+.topbar{padding:1rem 2.5rem;gap:1rem}
+.topbar nav{gap:1.4rem;flex-wrap:wrap}
+.topbar nav a{font-size:.95rem}
+.course-intro{min-height:0;padding:4rem 2.5rem;grid-template-columns:1.15fr 1fr;gap:2.5rem;align-items:center}
+.course-intro h1{font-size:clamp(2.6rem,4.7vw,4.1rem);line-height:1.05}
+.course-intro:after{display:none}
+.intro-copy>p{font-size:1.15rem}
+.workspace,.resources,.downloads,.student-perspectives,.comments{padding:3.5rem 2.5rem}
+.section-head{align-items:center;flex-wrap:wrap;gap:1.25rem}
+.section-head h2{font-size:clamp(2rem,3.8vw,3rem);line-height:1.1}
+.lecture-layout{grid-template-columns:220px minmax(0,1fr);gap:2rem}
+.lecture{grid-template-columns:2.2rem minmax(0,1fr);gap:.8rem}
+.lecture h3{font-size:1.15rem}
+.lecture-deck{grid-column:2;justify-self:start;font-size:1rem}
+.lecture-meta,.lecture-support,.support-files strong,.lecture-references{font-size:1rem}
+.filter,.tab,.download-pill,.quick-stats span{font-size:.95rem}
+.eyebrow,.small-label,.file-icon{font-size:.8rem}
+.perspectives-quotes{gap:2rem}
+.perspectives-quotes figcaption,.evaluation-source,.evaluation-ratings dt,.comments .comment-note,.comment-meta{font-size:.9rem}
+.resource-card{padding:1.3rem;min-width:0}
+.resource-card h3{font-size:1.7rem;line-height:1.15}
+.download-row{min-width:0;grid-template-columns:2.5rem minmax(0,1fr) auto}
+.download-row small{font-size:.9rem}
+.comments-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2rem}
+footer{padding:1.5rem 2.5rem;font-size:.9rem;flex-wrap:wrap}
+@media(max-width:1050px){
+ .topbar,main,footer{width:calc(100% - 64px)}
+ .lecture-layout{grid-template-columns:1fr}.lecture-layout .progress-card{display:none}
+ .course-intro{grid-template-columns:1fr}.intro-copy{max-width:36rem}
+ .resource-grid{grid-template-columns:1fr}.resource-card{min-height:210px}
+}
+@media(max-width:760px){
+ .topbar,main,footer{width:calc(100% - 32px)}
+ .topbar{position:relative;padding:1rem;flex-wrap:wrap}.topbar nav{gap:.6rem 1rem}
+ .topbar nav a,.topbar nav a:nth-child(3){display:inline;font-size:.9rem}
+ .course-intro,.workspace,.resources,.downloads,.student-perspectives,.comments{padding:2.5rem 1.2rem}
+ .course-intro h1{font-size:clamp(2.2rem,7vw,3.5rem)}
+ .perspectives-quotes,.file-list,.comments-layout{grid-template-columns:1fr}
+ .section-head{align-items:flex-start}.search input{width:100%}
+ .quick-stats{gap:1rem;flex-wrap:wrap}.evaluation-ratings{grid-template-columns:1fr}
+ footer{padding:1.25rem}.lecture-deck{white-space:normal}
+}

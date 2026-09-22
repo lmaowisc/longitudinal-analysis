@@ -4,7 +4,7 @@ Instructor: **Lu Mao, PhD, University of Wisconsin-Madison**.
 
 Course materials are adapted from *Applied Longitudinal Analysis* by Garrett M. Fitzmaurice, Nan M. Laird, and James H. Ware (Wiley). Additional references retain their original authorship.
 
-Source for the approved course website. The [live website](https://phs651-spring-2019.lmaowisc.chatgpt.site/) remains on its existing hosting, including its public comments service. The [GitHub repository](https://github.com/lmaowisc/longitudinal-analysis) holds the source and approved course materials; it is not a GitHub Pages deployment.
+Source for the [Applied Longitudinal Analysis website](https://lmaowisc.github.io/longitudinal-analysis/), hosted on GitHub Pages. The [GitHub repository](https://github.com/lmaowisc/longitudinal-analysis) holds the source and approved course materials. Anonymous public comments use the existing hosted comments service; visitors do not need a GitHub account.
 
 This clean copy excludes previous Git history, hosting credentials, the student evaluation source PDF, removed student work, temporary files, installed dependencies, and comments databases. Original teaching materials remain untouched.
 
@@ -45,9 +45,9 @@ The generated `dist/` folder is excluded from Git. Build from a fresh checkout f
 ## Hosting and reuse
 
 1. Use only this clean source tree for the public repository; never copy the previous site's `.git` directory.
-2. The live website retains its existing comments backend. The preserved `/api/comments` service requires a server and database and will not work on GitHub Pages alone. A separate deployment needs its own configured backend.
+2. `.github/workflows/pages.yml` publishes only `public/` to GitHub Pages when `main` changes. No backend, database, or credentials are included in the Pages artifact. The comment form calls `https://phs651-spring-2019.lmaowisc.chatgpt.site/api/comments` without cookies from GitHub Pages. Keep that backend active. It allows the exact `https://lmaowisc.github.io` origin, validates input, limits posting frequency, and requires a per-comment token for visitor removal. Instructor moderation remains on the original hosted site. Existing comments stay in the same database; browser-local removal tokens do not transfer between origins.
 3. Replace the existing platform-specific moderator authentication before independently deploying `server.js`. It currently expects trusted hosting-platform authentication headers. Those headers must not be trusted from arbitrary internet clients. The local preview strips them and does not provide instructor moderation.
 4. Review redistribution permissions for the course/book-derived and third-party materials. No blanket license is granted by this folder. See `THIRD_PARTY_NOTICES.md`.
 5. Review remaining historical limitations in `public/materials/README.md`. Lectures 2 and 19 still lack exact historical example inputs, and the SAS results have not been rerun. Optional datasets and the historical schedule remain intentionally included.
 
-The original site's hosting identifiers and configuration are deliberately excluded. There is no deployment workflow, GitHub token, or automatic publishing action in this folder.
+The original site's private hosting configuration and Git history are deliberately excluded. No GitHub token is stored here. Changes to `server.js` must be deployed separately to the comments service; the GitHub Pages workflow deploys static files only.
