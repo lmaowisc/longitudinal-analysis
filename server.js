@@ -13,7 +13,23 @@ export default {
   async fetch(request,env) {
     const origin=request.headers.get('Origin');
     const url=new URL(request.url);
-    if(!url.pathname.startsWith('/api/')) return env.ASSETS.fetch(request);
+    if(!url.pathname.startsWith('/api/')){
+      if(url.hostname==='phs651-spring-2019.lmaowisc.chatgpt.site'){
+        // Retain an instructor-only moderation view, not a second public course.
+        const moderationPage=['/','/index.html'].includes(url.pathname) && url.searchParams.get('moderate')==='1';
+        const moderationAsset=['/styles.css','/app.js','/comments.js','/lectures.js','/lecture-support.js'].includes(url.pathname);
+        if(moderator(request) && (moderationPage || moderationAsset)){
+          const assetURL=new URL(request.url);assetURL.search='';
+          const response=await env.ASSETS.fetch(new Request(assetURL,request));
+          const headers=new Headers(response.headers);
+          headers.set('Cache-Control','private, no-store');headers.set('X-Robots-Tag','noindex, nofollow');
+          return new Response(response.body,{status:response.status,headers});
+        }
+        const path=url.pathname==='/index.html'?'':url.pathname.replace(/^\//,'');
+        return new Response(null,{status:302,headers:{Location:'https://lmaowisc.github.io/longitudinal-analysis/'+path,'Cache-Control':'no-store'}});
+      }
+      return env.ASSETS.fetch(request);
+    }
     const allowed=origin===url.origin || origin===pagesOrigin;
     if(request.method==='OPTIONS'){
       if(!allowed)return json({error:'Origin not allowed.'},403);

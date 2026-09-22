@@ -39,3 +39,13 @@ assert.equal((await call('GET',undefined,{...pagesHeaders,'oai-authenticated-use
 assert.equal((await call('DELETE',undefined,{...pagesHeaders,'oai-authenticated-user-email':'lmaowisc@gmail.com'},`/api/comments/${cross.data.comment.id}`)).status,403);
 assert.equal((await call('DELETE',undefined,{...pagesHeaders,'X-Delete-Token':cross.data.deleteToken},`/api/comments/${cross.data.comment.id}`)).status,200);
 console.log('PASS: anonymous GitHub Pages posting and removal, exact-origin CORS, no cross-origin moderator privileges.');
+const oldOrigin='https://phs651-spring-2019.lmaowisc.chatgpt.site';
+for(const path of ['/','/index.html','/?moderate=1','/materials/data/tlc-data.txt']){
+ const r=await worker.fetch(new Request(oldOrigin+path),env);
+ assert.equal(r.status,302);
+ assert.ok(r.headers.get('Location').startsWith('https://lmaowisc.github.io/longitudinal-analysis/'));
+}
+const instructor=await worker.fetch(new Request(oldOrigin+'/?moderate=1',{headers:{'oai-authenticated-user-email':'lmaowisc@gmail.com'}}),env);
+assert.equal(instructor.status,200);assert.equal(instructor.headers.get('Cache-Control'),'private, no-store');
+assert.equal((await worker.fetch(new Request(oldOrigin+'/api/comments',{headers:{Origin:'https://lmaowisc.github.io'}}),env)).status,200);
+console.log('PASS: old pages redirect, downloads preserve paths, anonymous moderation access denied, instructor view and public API retained.');
