@@ -1,7 +1,7 @@
 /* A bounded reading surface with larger, comfortable course text. */
 html{font-size:112.5%}
 body{font-size:1rem;line-height:1.7;background:#e5e7e4}
-.topbar,main,footer{width:min(1200px,calc(100% - 96px));margin-inline:auto}
+.topbar,main,footer{width:min(1320px,calc(100% - 64px));margin-inline:auto}
 main{background:var(--paper)}
 .topbar{padding:1rem 2.5rem;gap:1rem}
 .topbar nav{gap:1.4rem;flex-wrap:wrap}
@@ -14,9 +14,9 @@ main{background:var(--paper)}
 .section-head{align-items:center;flex-wrap:wrap;gap:1.25rem}
 .section-head h2{font-size:clamp(2rem,3.8vw,3rem);line-height:1.1}
 .lecture-layout{grid-template-columns:220px minmax(0,1fr);gap:2rem}
-.lecture{grid-template-columns:2.2rem minmax(0,1fr);gap:.8rem}
+.lecture{grid-template-columns:2.2rem minmax(0,1fr) auto;gap:.8rem}
 .lecture h3{font-size:1.15rem}
-.lecture-deck{grid-column:2;justify-self:start;font-size:1rem}
+.lecture-deck{grid-column:3;grid-row:1;justify-self:end;font-size:1rem}
 .lecture-meta,.lecture-support,.support-files strong,.lecture-references{font-size:1rem}
 .filter,.tab,.download-pill,.quick-stats span{font-size:.95rem}
 .eyebrow,.small-label,.file-icon{font-size:.8rem}
@@ -43,5 +43,7 @@ footer{padding:1.5rem 2.5rem;font-size:.9rem;flex-wrap:wrap}
  .perspectives-quotes,.file-list,.comments-layout{grid-template-columns:1fr}
  .section-head{align-items:flex-start}.search input{width:100%}
  .quick-stats{gap:1rem;flex-wrap:wrap}.evaluation-ratings{grid-template-columns:1fr}
- footer{padding:1.25rem}.lecture-deck{white-space:normal}
+ footer{padding:1.25rem}
+ .lecture{grid-template-columns:2.2rem minmax(0,1fr)}
+ .lecture-deck{grid-column:2;grid-row:auto;justify-self:start;white-space:normal}
 }
