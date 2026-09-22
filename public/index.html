@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Applied Longitudinal Analysis — PHS 651 with Lu Mao, PhD, University of Wisconsin-Madison. Lecture PowerPoints, SAS examples, and matched datasets.">
+  <title>Applied Longitudinal Analysis · PHS 651</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23122d38'/%3E%3Cpath d='M12 43c9-5 12-24 20-24s10 26 20 20' fill='none' stroke='%23f3b33d' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='12' cy='43' r='4' fill='%23eef6f4'/%3E%3Ccircle cx='32' cy='19' r='4' fill='%23eef6f4'/%3E%3Ccircle cx='52' cy='39' r='4' fill='%23eef6f4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="PHS 651 home"><span>PHS</span> 651</a>
+    <nav aria-label="Course navigation">
+      <a href="#lectures">Lectures</a><a href="#resources">Resources</a><a href="#downloads">Supporting files</a><a href="#comments">Comments</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="course-intro" aria-labelledby="course-title">
+      <div>
+        <p class="eyebrow">Spring 2019 · Course archive</p>
+        <h1 id="course-title">Applied<br>Longitudinal<br>Analysis</h1>
+        <p class="instructor">Instructor: Lu Mao, PhD<br><span>University of Wisconsin-Madison</span></p>
+      </div>
+      <div class="intro-copy">
+        <p>A practical course in modeling correlated outcomes—from response profiles and mixed effects models to GEE, missing data, smoothing, and multilevel models.</p>
+        <div class="book-credit"><p class="small-label">About these materials</p><p>Course materials are adapted from <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781119513469"><cite>Applied Longitudinal Analysis</cite></a> by Garrett M. Fitzmaurice, Nan M. Laird, and James H. Ware (Wiley).</p></div>
+        <div class="quick-stats" aria-label="Course summary"><span><strong>24</strong> lectures</span><span><strong id="sas-count"></strong> SAS programs</span><span><strong id="data-count"></strong> datasets</span></div>
+      </div>
+    </section>
+
+    <section class="student-perspectives" id="student-perspectives" aria-labelledby="perspectives-title">
+      <div class="perspectives-heading"><p class="eyebrow">From the Spring 2019 classroom</p><h2 id="perspectives-title">Student perspectives</h2></div>
+      <div class="perspectives-quotes">
+        <figure><blockquote><p>“This course not only teaches us theoretical knowledge, but also gives us practical operations opportunity using SAS.”</p></blockquote><figcaption>Anonymous student evaluation · excerpt</figcaption></figure>
+        <figure><blockquote><p>“Dr. Mao was one of the most responsive instructors I have ever had.”</p></blockquote><figcaption>Anonymous student evaluation · excerpt</figcaption></figure>
+      </div>
+      <dl class="evaluation-ratings">
+        <div><dt>Overall course satisfaction</dt><dd>6.8 <span>/ 7</span></dd></div>
+        <div><dt>Overall instructor satisfaction</dt><dd>6.6 <span>/ 7</span></dd></div>
+        <div><dt>“I learned a lot in this course.”</dt><dd>7.0 <span>/ 7</span></dd></div>
+      </dl>
+      <p class="evaluation-source">Selected feedback from UW–Madison’s anonymous Spring 2019 end-of-term evaluation, POP HLTH/B M I 651. Mean ratings on a 1–7 scale (7 highest); 5 of 8 students responded.</p>
+    </section>
+
+    <section class="workspace" id="lectures" aria-labelledby="lectures-title">
+      <span id="schedule" aria-hidden="true"></span>
+      <div class="section-head">
+        <div><p class="eyebrow">Course sequence</p><h2 id="lectures-title">Lecture materials</h2></div>
+        <a class="deck-bundle" href="materials/PHS651_Restyled_Lectures.zip" download>Download all 24 PowerPoints ↓</a>
+      </div>
+      <div class="lecture-layout">
+        <aside class="progress-card">
+          <p class="small-label">Learning arc</p>
+          <ol>
+            <li><span>01</span> Foundations</li><li><span>02</span> Linear models</li><li><span>03</span> Mixed effects</li><li><span>04</span> Generalized models</li><li><span>05</span> Missing & multilevel</li>
+          </ol>
+          <a class="download-pill" href="materials/lectures/DraftSchedule651_Spring2019.pdf" download>Original 2019 schedule <span>↓</span></a>
+        </aside>
+        <div class="lecture-content">
+          <label class="search lecture-search"><span class="sr-only">Search lectures</span><input id="lecture-search" type="search" placeholder="Search lecture number or topic…"><span aria-hidden="true">⌕</span></label>
+          <div id="lecture-list" class="lecture-list"></div>
+          <p id="lecture-empty" class="empty-state" role="status" hidden>No lectures match your search.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="resources" id="resources" aria-labelledby="resources-title">
+      <div class="section-head"><div><p class="eyebrow">Study desk</p><h2 id="resources-title">Course resources</h2></div></div>
+      <div class="resource-grid">
+        <article class="resource-card teal"><span class="resource-number">01</span><h3>SAS examples</h3><p>Programs matched to lecture examples and Homework 1.</p><a href="#downloads" data-jump-filter="sas">Browse programs →</a></article>
+        <article class="resource-card amber"><span class="resource-number">02</span><h3>Practice data</h3><p>Lecture and assignment datasets, plus optional practice data.</p><a href="#downloads" data-jump-filter="data">Browse datasets →</a></article>
+        <article class="resource-card ink"><span class="resource-number">03</span><h3>References &amp; course documents</h3><p>Matrix operations, model diagnostics, time-varying confounding, assignments, and the historical schedule.</p><a href="#downloads" data-jump-filter="reference">Browse documents →</a></article>
+      </div>
+      <p class="resource-note">Download the data listed with each program and set your SAS working directory to the folder containing those data files. See the <a href="materials/README.md" download>materials guide</a> for usage notes and known gaps.</p>
+    </section>
+
+    <section class="downloads" id="downloads" aria-labelledby="downloads-title">
+      <div class="section-head">
+        <div><p class="eyebrow">Code, data & references</p><h2 id="downloads-title">Supporting files</h2></div>
+        <label class="search"><span class="sr-only">Search supporting files</span><input id="file-search" type="search" placeholder="Search supporting files…"><span aria-hidden="true">⌕</span></label>
+      </div>
+      <div class="download-tabs" role="group" aria-label="Supporting file categories">
+        <button class="tab active" data-file-filter="all" aria-pressed="true">All</button><button class="tab" data-file-filter="sas" aria-pressed="false">SAS code</button><button class="tab" data-file-filter="data" aria-pressed="false">Data</button><button class="tab" data-file-filter="reference" aria-pressed="false">References &amp; documents</button>
+      </div>
+      <div id="file-list" class="file-list"></div>
+      <p id="file-empty" class="empty-state" role="status" hidden>No supporting files match your search.</p>
+    </section>
+    <section class="comments" id="comments" aria-labelledby="comments-title">
+      <div class="section-head"><div><p class="eyebrow">Course conversation</p><h2 id="comments-title">Comments & questions</h2></div><button type="button" id="refresh-comments">Refresh comments</button></div>
+      <p>Share a question, suggestion, or correction. Comments appear immediately and are visible to everyone who can access this website. Please keep them relevant and respectful, and do not include private information.</p>
+      <div class="comments-layout">
+        <form id="comment-form">
+          <label for="comment-name">Display name</label><input id="comment-name" name="name" maxlength="80" autocomplete="nickname" required>
+          <label for="comment-lecture">Lecture (optional)</label><select id="comment-lecture" name="lecture"><option value="">General course comment</option></select>
+          <label for="comment-body">Your comment</label><textarea id="comment-body" name="body" rows="6" maxlength="2000" required aria-describedby="comment-note"></textarea>
+          <p id="comment-note" class="comment-note">Up to 2,000 characters. Display names are visitor-provided, not verified identities. You can remove your own comments from this browser; the instructor can moderate all comments.</p>
+          <div hidden aria-hidden="true"><label for="comment-website">Website</label><input id="comment-website" name="website" tabindex="-1" autocomplete="off"></div>
+          <button type="submit" id="post-comment">Post comment</button><p id="post-status" role="status" aria-live="polite"></p>
+        </form>
+        <div><p id="comments-status" role="status" aria-live="polite">Loading comments…</p><div id="comment-list"></div><button type="button" id="more-comments" hidden>Load older comments</button></div>
+      </div>
+      <noscript>Please enable JavaScript to read and leave comments.</noscript>
+    </section>
+  </main>
+  <footer><p>PHS 651 · Applied Longitudinal Analysis · Spring 2019</p><p>Lu Mao, PhD · University of Wisconsin-Madison</p></footer>
+  <script src="lectures.js"></script>
+  <script src="lecture-support.js"></script>
+  <script src="app.js"></script>
+  <script src="comments.js"></script>
+</body>
+</html>

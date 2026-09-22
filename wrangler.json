@@ -1,0 +1,1 @@
+{"name":"phs651-comments-preview","main":"server.js","compatibility_date":"2025-09-01","assets":{"directory":"./dist/client","binding":"ASSETS","run_worker_first":["/api/*"]},"d1_databases":[{"binding":"DB","database_name":"phs651-comments-local","database_id":"local-comments","migrations_dir":"drizzle"}]}

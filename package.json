@@ -1,0 +1,1 @@
+{"name":"applied-longitudinal-analysis","private":true,"type":"module","scripts":{"build":"node build.mjs","preview":"node preview.mjs","test":"node test-comments.mjs","db:generate":"drizzle-kit generate","dev":"wrangler dev"},"devDependencies":{"drizzle-kit":"0.31.4","drizzle-orm":"0.44.2","wrangler":"4.35.0"}}

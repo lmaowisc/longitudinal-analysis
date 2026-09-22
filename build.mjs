@@ -1,0 +1,10 @@
+import {mkdirSync,cpSync,existsSync} from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.dirname(fileURLToPath(import.meta.url));
+if(!existsSync(path.join(root,'public/index.html')))throw Error('Missing public/index.html');
+mkdirSync(path.join(root,'dist/client'),{recursive:true});
+cpSync(path.join(root,'public'),path.join(root,'dist/client'),{recursive:true});
+mkdirSync(path.join(root,'dist/server'),{recursive:true});
+cpSync(path.join(root,'server.js'),path.join(root,'dist/server/index.js'));
+console.log('Built website in dist/client and comments server in dist/server. No deployment performed.');

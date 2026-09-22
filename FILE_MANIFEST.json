@@ -1,0 +1,390 @@
+{
+  "description": "SHA-256 inventory of the approved website assets copied on 2026-09-22. No comments database is included.",
+  "files": [
+    {
+      "path": "public/app.js",
+      "bytes": 4604,
+      "sha256": "d7da0dca9e72bb93976933564a6341e6e5ddca9693b33f2c8754b45d295865f2"
+    },
+    {
+      "path": "public/comments.js",
+      "bytes": 3783,
+      "sha256": "dc1a3a1b0deaf7fee952dae09302d32ded1159040a3eaf20b1a2afbbd397d280"
+    },
+    {
+      "path": "public/index.html",
+      "bytes": 9725,
+      "sha256": "9b5a9f99ce8503792f157e8cbefda9090dcb4bb317f0cc0bc1f499198d035289"
+    },
+    {
+      "path": "public/lecture-support.js",
+      "bytes": 6290,
+      "sha256": "6b1fbe8dd03c11d0eacb5a8fb56fc5c1b04d5cb7316954e3d8884a9d8c1c376c"
+    },
+    {
+      "path": "public/lectures.js",
+      "bytes": 4113,
+      "sha256": "a9037c6dee039cb20393a87d9530cc9dff243c7f6430350d4162441ae30cc73d"
+    },
+    {
+      "path": "public/materials/assignments/Final project - PHS651 Spring 2019.pdf",
+      "bytes": 368503,
+      "sha256": "e07014851cd24dc109e9535634388c49d6dd57f727faf959b8590e086900dde5"
+    },
+    {
+      "path": "public/materials/assignments/HW1 Solution.pdf",
+      "bytes": 629547,
+      "sha256": "baae2c8b700938d6f18309b873e032e2770c0ec2723c27174ea3c4d18cb8104b"
+    },
+    {
+      "path": "public/materials/code/HW1.sas",
+      "bytes": 1692,
+      "sha256": "796a1934dab9417351fa3f2a1fa5a26d781ca310408745c438e12fd3dc685346"
+    },
+    {
+      "path": "public/materials/code/lecture10.sas",
+      "bytes": 971,
+      "sha256": "27399fb7cd72f37962d1ae848ae0422a684a0e79513bca210ead0c4d60f96d4d"
+    },
+    {
+      "path": "public/materials/code/lecture11.sas",
+      "bytes": 1847,
+      "sha256": "d626bb90e645a56fc6167cfe2e237ad596f3e2a50a3c70570a99e553b3931af0"
+    },
+    {
+      "path": "public/materials/code/lecture13.sas",
+      "bytes": 1925,
+      "sha256": "70ab0f12ba789d69e1923679f2418d7daa8fec3dfa65a18606117bf84ff0360e"
+    },
+    {
+      "path": "public/materials/code/lecture14.sas",
+      "bytes": 1288,
+      "sha256": "6f67d38c7a8e2bd0d45c98e8e260627b13c0e792d499c6296f6af6acf0773b08"
+    },
+    {
+      "path": "public/materials/code/lecture15.sas",
+      "bytes": 1647,
+      "sha256": "333abac00bf14fc3aa43cbd856fe8fc55e87ac4f2749641bce8206c57f7a4986"
+    },
+    {
+      "path": "public/materials/code/lecture16.sas",
+      "bytes": 3403,
+      "sha256": "9aa86f8c56cf5e05461c1b2522f1529b3e92dd931277f593c89e48088b91c69a"
+    },
+    {
+      "path": "public/materials/code/lecture18.sas",
+      "bytes": 3522,
+      "sha256": "27728bddf33d862e905231c612b9cbe351e22fba5b354b3dac2f495108209ce4"
+    },
+    {
+      "path": "public/materials/code/lecture2.sas",
+      "bytes": 1142,
+      "sha256": "be7f8b23c4f6237eb417b6c7ae5963f6237876a13320b3e932a88c51e150c32b"
+    },
+    {
+      "path": "public/materials/code/lecture20.sas",
+      "bytes": 4200,
+      "sha256": "49585da4d79eb5b733dafff4b6ed7280bf0fd8a1917140664081dbeaf43f3669"
+    },
+    {
+      "path": "public/materials/code/lecture21.sas",
+      "bytes": 2119,
+      "sha256": "6f50646b406388b5fe969f231d9aba4076af28a1fd96575f9f6c73d9f2c4c534"
+    },
+    {
+      "path": "public/materials/code/lecture22.sas",
+      "bytes": 763,
+      "sha256": "4dfb9f4f9bddb637cc4c9e1481fbe6c3374b53917181a0da0eb13b6083e6eef2"
+    },
+    {
+      "path": "public/materials/code/lecture23.sas",
+      "bytes": 1245,
+      "sha256": "c2d44d834627df18c96ad65af88815cca356da50528af9e0e6aee297736283c7"
+    },
+    {
+      "path": "public/materials/code/lecture3.sas",
+      "bytes": 2590,
+      "sha256": "d199760b30cf1153742f072aa17b3d721f91b4da5415db944751c14e1a1e3bdb"
+    },
+    {
+      "path": "public/materials/code/lecture4.sas",
+      "bytes": 1483,
+      "sha256": "788234aef04ca848d9acbda3effb1313163c9e11a101128727abd0163d7823ce"
+    },
+    {
+      "path": "public/materials/code/lecture6.sas",
+      "bytes": 1038,
+      "sha256": "462ef7910b5606bd3600a40a8026ead0d36febeeb686d77f008d939d01300429"
+    },
+    {
+      "path": "public/materials/code/lecture7.sas",
+      "bytes": 3197,
+      "sha256": "f9c5e1f08170a756b06f7d536e67a61623b4e845a5790987444ef7c6d98c0ebe"
+    },
+    {
+      "path": "public/materials/code/lecture8.sas",
+      "bytes": 2184,
+      "sha256": "b60e2e8e77549a304b0623b2a02b2ad0489c341877216e64eea4492f15774a6c"
+    },
+    {
+      "path": "public/materials/code/lecture9.sas",
+      "bytes": 1455,
+      "sha256": "03129af0a9bbb0bb4a3372299b171f7c50d0b5ec628e2a283c6aadda7186bf20"
+    },
+    {
+      "path": "public/materials/data/arthritis-data.txt",
+      "bytes": 5043,
+      "sha256": "7f6163b4cfc673956df00da78a01aeee5f2fece2a4d082dc59f78e277e31ad1f"
+    },
+    {
+      "path": "public/materials/data/cholesterol-data.txt",
+      "bytes": 3342,
+      "sha256": "0596de48b12485ce58301659a88fc0c6850266061ffa1ff6612c92694ae39274"
+    },
+    {
+      "path": "public/materials/data/contracep-data.txt",
+      "bytes": 77398,
+      "sha256": "f235abcb2e8d17ea8972d8e8c089ffb261c0a0887c73d00c3cb5498f629409bf"
+    },
+    {
+      "path": "public/materials/data/dental-data.txt",
+      "bytes": 1538,
+      "sha256": "bbf9c5df5952e3dae11d27f86c1b4362b18670943ace8c87aeeeb552c9e6b79f"
+    },
+    {
+      "path": "public/materials/data/ecg-data.txt",
+      "bytes": 6565,
+      "sha256": "73a8a4b9aac49b4ed0fc7da17dc8eb32812824168e436ad03d3d99c545e51e44"
+    },
+    {
+      "path": "public/materials/data/epilepsy-data.txt",
+      "bytes": 3539,
+      "sha256": "8675b76ed38d29ce765a5bee444ce5e510e667a296f8eac0d0debb725b28c664"
+    },
+    {
+      "path": "public/materials/data/exercise-data.txt",
+      "bytes": 2182,
+      "sha256": "f2b96badd91385ec4d52e9bfb995f1c22ec3de213f0289751d1ba9fecb4a74ca"
+    },
+    {
+      "path": "public/materials/data/fat-data.txt",
+      "bytes": 56644,
+      "sha256": "a58a29df3e4309ccc58655cfa9464fb2709eb08c7698992bcacbfb75fb5e686c"
+    },
+    {
+      "path": "public/materials/data/fev1.sas7bdat",
+      "bytes": 103424,
+      "sha256": "8a47449ba7faefc039ce9d2de65058280b9cf092abe6c4093f6d078bc3704192"
+    },
+    {
+      "path": "public/materials/data/fev1_baseline.txt",
+      "bytes": 24360,
+      "sha256": "865fbbfd4d21bf771209db93a6600d650dd230dd82280ffc97fc5742a3babbb4"
+    },
+    {
+      "path": "public/materials/data/headache-data.txt",
+      "bytes": 28340,
+      "sha256": "bfa99c94fccde62645c9da676f88df7d569d220bc5d1f64e106925a9a17a2e5e"
+    },
+    {
+      "path": "public/materials/data/HEALTH.txt",
+      "bytes": 7973,
+      "sha256": "6e042f2bfd3bf7f883ed6289b4f8c9eb965b8623e2a6a3de958ec575408e7a90"
+    },
+    {
+      "path": "public/materials/data/leprosy-data.txt",
+      "bytes": 479,
+      "sha256": "8325a5cd771161acd40783860a59ddb6068ef56778ba583a1f8611239e3d65af"
+    },
+    {
+      "path": "public/materials/data/progesterone-data.txt",
+      "bytes": 21144,
+      "sha256": "cd5f83c1738cc610593876b37a60d791d769b48e7e59345983a51bc89d57dd15"
+    },
+    {
+      "path": "public/materials/data/rat-data.txt",
+      "bytes": 1430,
+      "sha256": "853417c2048a34ce826a3304a777d52f330a32842bf7bea91ff60bdbd58f3640"
+    },
+    {
+      "path": "public/materials/data/skin-data.txt",
+      "bytes": 531270,
+      "sha256": "00f9e5b305a757177c57c6687fc8e9d57dd4379ce251246f85b628e19e0c6a6d"
+    },
+    {
+      "path": "public/materials/data/smoking-data.txt",
+      "bytes": 36236,
+      "sha256": "63cf98f54989673692a6e5ece0f162324927bb4695d4f78fb54189b87b82933a"
+    },
+    {
+      "path": "public/materials/data/tlc-data.txt",
+      "bytes": 5799,
+      "sha256": "40f35a1e2f1555962baebf34e637423ed6ece07e387949428d7233c7bfeb9a6e"
+    },
+    {
+      "path": "public/materials/data/toenail-data.txt",
+      "bytes": 31922,
+      "sha256": "480cfa149592aec6a0e4b2191e36dc3b91b1b107426d8c7876ea919357279967"
+    },
+    {
+      "path": "public/materials/data/tvsfp-data.txt",
+      "bytes": 81599,
+      "sha256": "dfe9407bbaa29998fed07d23d4f70b2a98955dc7668c5f18b911b8e38f0ac433"
+    },
+    {
+      "path": "public/materials/lectures/Appendix. Matrix operations.pdf",
+      "bytes": 153783,
+      "sha256": "d5221edf0932d63524f4c88a393c506010396401e5ea27b36cfd9d9d0c3dfb60"
+    },
+    {
+      "path": "public/materials/lectures/DraftSchedule651_Spring2019.pdf",
+      "bytes": 10124,
+      "sha256": "0bc5410fb20e97e453c44f9766ad84c6ed7b9629ff2d7e742870a8c705521cc3"
+    },
+    {
+      "path": "public/materials/lectures/Model Diagnostics.pdf",
+      "bytes": 555479,
+      "sha256": "5aee7f0de9d2cddbcc6ca46ddc2a75a6479294e4ed99233b979cb6a93488eff1"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_01_Introduction.pptx",
+      "bytes": 1101774,
+      "sha256": "bc62c5e6d7e6f5c1b367417f6cd809a43f47c20d08130e170076d676e5fcf6a2"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_02_Linear_Regression_Maximum_Likelihood_and_ANOVA.pptx",
+      "bytes": 1403037,
+      "sha256": "4977152c9606f45b5b9644ba3b20254b854e26d43812be49bc1bbcff0c7bcfa4"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_03_Descriptive_and_Graphical_Analysis_Using_SAS.pptx",
+      "bytes": 701663,
+      "sha256": "6d69d5871eb0b00c56707bcf6c28ea6685d50d708d6f5ef306ef3f02acf4f627"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_04_Single_Group_Analysis_and_General_Linear_Models.pptx",
+      "bytes": 1079741,
+      "sha256": "961825f3d6555dca840ddfa655f61dba0b536cbcd9e0b0dbc0dd34b31e1cc367"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_05_Estimation_and_Inference_in_the_General_Linear_Model.pptx",
+      "bytes": 1353422,
+      "sha256": "e2948c8380c15681ebc0c63baec058c9aced4157a93e0a56969a2d6d2e8ca812"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_06_Analysis_of_Response_Profiles.pptx",
+      "bytes": 663178,
+      "sha256": "1494019d8d4bb441fa5d337a7b204092056c93086ce3991c6d980a233cbcf7d3"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_07_More_on_Analysis_of_Response_Profiles.pptx",
+      "bytes": 925321,
+      "sha256": "d22da44fb32c5ec0baa5713d5df9d107493c9605c82d8050714e298667793376"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_08_Modeling_the_Mean_Parametric_Curves.pptx",
+      "bytes": 849941,
+      "sha256": "8131632cc6abcf3351e2cf4eeeb831e880a8d0181ae14f4925407baf1af03636"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_09_Modeling_the_Covariance.pptx",
+      "bytes": 1198403,
+      "sha256": "fe6a79c7f227e08c7193c1a3163d908b6191e60f8da805c6a33c0a42377aaefe"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_10_Linear_Mixed_Effects_Models.pptx",
+      "bytes": 1166288,
+      "sha256": "d1cc58bd915bf31f032a74d43a84370e1b23ffa812486588de12ee6ead7a3b91"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_11_Prediction_in_Mixed_Effects_Models.pptx",
+      "bytes": 1280236,
+      "sha256": "bda8c4f51fc414a5d23578c42c04ba9ad5ff4c1032eff12bde19ea1d9ec0716c"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_12_Design_of_Longitudinal_Studies.pptx",
+      "bytes": 1213448,
+      "sha256": "d5ce9152e60f18dc0c603c009a30911e934de9dd2f0997c90f19834480b13f12"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_13_Residual_Analysis_and_Diagnostics.pptx",
+      "bytes": 741206,
+      "sha256": "7d3e2487379b2f346a0d6d7f8d4308bcdfa39edcb710989f226396deb3671b0d"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_14_Generalized_Linear_Models_for_Longitudinal_Data.pptx",
+      "bytes": 300067,
+      "sha256": "09ac6cb9049e74515ec8b8bb8ffd958bb45fa62cd4cbbfccf6678f17cacf360f"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_15_Marginal_Models_Generalized_Estimating_Equations.pptx",
+      "bytes": 696575,
+      "sha256": "138b53f60d3b397be53d58f7eadca4e16ee71642bf75de707bdfd59b7ce1d53a"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_16_Case_Studies_of_Marginal_Models.pptx",
+      "bytes": 783942,
+      "sha256": "0bffd635bbf9e14aa02af726d201abb2182aab8f09676fc71339ddd585b79c01"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_17_Generalized_Linear_Mixed_Effects_Models.pptx",
+      "bytes": 520670,
+      "sha256": "950e9534b904fb1019243bb2cf26aa98e3750b39375bb4d11d6a846fbf5d97dc"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_18_Contrasting_GLMM_and_GEE.pptx",
+      "bytes": 857441,
+      "sha256": "44f77cf4abbc9580b67bbbe19839049e478361ee9c0ba10dd7fec6fc752ee18b"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_19_Missing_Data_and_Multiple_Imputation.pptx",
+      "bytes": 976484,
+      "sha256": "13be8202a89922aea0fe7280a2e2dea7fca0c45f5b22c14b7a3f6a511e66f6c8"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_20_Inverse_Probability_Weighting_for_Missing_Data.pptx",
+      "bytes": 923450,
+      "sha256": "db692bd877692dacfa573c178690aac901e1d4f617717b972793bd11ce9a899b"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_21_Smoothing_Longitudinal_Data_Semiparametric_Regression_Models.pptx",
+      "bytes": 878649,
+      "sha256": "31ebd222c6bc0d1d042e1711104e1be44a12e39a8fe01509c7af22149babb14c"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_22_Multilevel_Models.pptx",
+      "bytes": 645323,
+      "sha256": "a0f7c25a93e91ae35d87c3d743e0c6030589ec0eff78d84a4f72feb8ee4f22b5"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_23_Special_Topic_Repeated_Measures_Designs.pptx",
+      "bytes": 542490,
+      "sha256": "857ac12067a9c45683168ebef297f8ea08dbe9cc19dede5a8f2d03e63185f804"
+    },
+    {
+      "path": "public/materials/lectures/PHS651_Lecture_24_Review_and_Prospects.pptx",
+      "bytes": 208140,
+      "sha256": "6c3de028ddc2d77a93c7b294d4c097c33d3c67af8b9fff6d1642bff5363ac6b3"
+    },
+    {
+      "path": "public/materials/lectures/timevarying_Hernan.pdf",
+      "bytes": 590997,
+      "sha256": "ffa3129add549590683052dbe67e909dc87daf4add6f78150d733963bc01110e"
+    },
+    {
+      "path": "public/materials/PHS651_Restyled_Lectures.zip",
+      "bytes": 20601400,
+      "sha256": "08521c382e3c2650d43a46cd1d936751de2a4956927a2aaf514507507477c1bc"
+    },
+    {
+      "path": "public/materials/README.md",
+      "bytes": 3668,
+      "sha256": "c51298a7853b460b46b60b865e66c4cabc2115b15173a6daca24e68edb8f9244"
+    },
+    {
+      "path": "public/styles.css",
+      "bytes": 13645,
+      "sha256": "8d49a945dd65865b3c51e962942726ccc988494ada73b60e5a4bf8aa96b64f77"
+    }
+  ]
+}

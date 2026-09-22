@@ -1,0 +1,23 @@
+# Installed dependencies and generated build output
+node_modules/
+dist/
+
+# Local runtime state and credentials
+.wrangler/
+.openai/
+.sites-runtime/
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.log
+
+# OS/editor scratch files
+.DS_Store
+Thumbs.db
+~$*
